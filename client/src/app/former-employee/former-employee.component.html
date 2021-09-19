@@ -1,0 +1,23 @@
+{{ editMode ? 'Mettre à jours' : 'Ajouter' }}
+<!-- [formGroup]="addForm" (ngSubmit)="onSubmit()"  -->
+<form  [formGroup]="addForm" (ngSubmit)="onSubmit()" >
+    
+<div class="form-group">
+    <label>nom</label>
+    <input type="text" id="nom" class="form-control" placeholder="nom" formControlName="nom" >
+</div>
+<div class="form-group">
+    <label>prenom</label>
+    <input type="text" id="prenom" class="form-control" placeholder="prenom" formControlName="prenom" >
+</div>
+<div class="form-group">
+    <label>photo de profil</label>
+    <input type="text" id="profileimage" class="form-control" placeholder="photo de profil" formControlName="profileimage" >
+</div>
+<div class="form-group">
+    <label>email</label>
+    <input type="text" id="email" class="form-control" placeholder="email" formControlName="email">
+</div>
+<button class="btn btn-primary" type="submit">{{ editMode ? 'valider' : 'Ajouter' }}</button>
+
+</form>
